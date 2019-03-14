@@ -10,6 +10,7 @@ V.addOnSkins = {
 	DBM = true,
 	MacroToolkit = true,
 	Overachiever = true,
+	Omen = true,
 	PetTracker = true,
 	PlateBuffs = true,
 	Postal = true,

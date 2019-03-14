@@ -7,6 +7,7 @@
 	<Script file="DBM.lua"/>
 	<Script file="MacroToolkit.lua"/>
 	<Script file="Overachiever.lua"/>
+	<Script file="Omen.lua"/>
 	<Script file="PetTracker.lua"/>
 	<Script file="PlateBuffs.lua"/>
 	<Script file="Postal.lua"/>

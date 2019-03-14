@@ -17,6 +17,7 @@ local addonList = {
 	"DBM",
 	"MacroToolkit",
 	"Overachiever",
+	"Omen",
 	"PetTracker",
 	"PlateBuffs",
 	"Postal",
