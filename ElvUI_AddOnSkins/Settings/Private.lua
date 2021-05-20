@@ -1,24 +1,35 @@
 ﻿local E, L, V, P, G = unpack(ElvUI)
 
 V.addOnSkins = {
-	-- Addon Skins
 	_NPCScan = true,
+	AckisRecipeList = true,
 	ACP = true,
 	AtlasLoot = true,
+	Auctionator = true,
 	BattlePetBreedID = true,
+	BindPad = true,
+	BugSack = true,
 	Clique = true,
 	DBM = true,
+	Doom_CooldownPulse = true,
+	EasyMail = true,
+	ExtVendor = true,
+	Factionizer = true,
+	FlightMap = true,
+	Gatherer = true,
+	LightHeaded = true,
 	MacroToolkit = true,
 	Overachiever = true,
-	Omen = true,
+	PetJournal_QuickFilter = true,
+	PetJournalEnhanced = true,
 	PetTracker = true,
 	PlateBuffs = true,
 	Postal = true,
+	RCLootCouncil = true,
 	Recount = true,
+	SilverDragon = true,
 	Skada = true,
 	Spy = true,
+	TrinketMenu = true,
 	WeakAuras = true,
-
-	--Blizzard Skins
-	Blizzard_WorldStateFrame = true
 }

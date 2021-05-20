@@ -1,11 +1,14 @@
 local E, L, V, P, G = unpack(ElvUI)
 local S = E:GetModule("Skins")
 
+local _G = _G
+local select = select
+
 local function LoadSkin()
-	if(not E.private.addOnSkins._NPCScan) then return end
+	if not E.private.addOnSkins._NPCScan then return end
 
 	_NPCScanButton:StripTextures()
-	_NPCScanButton:SetTemplate("Transparent", true)
+	_NPCScanButton:SetTemplate("Transparent")
 
 	_NPCScanButton:SetScale(1)
 	_NPCScanButton.SetScale = E.noop
@@ -15,10 +18,10 @@ local function LoadSkin()
 
 	for i = 1, _NPCScanButton:GetNumChildren() do
 		local child = select(i, _NPCScanButton:GetChildren())
-		if(child and child:IsObjectType("Button")) then
+		if child and child:IsObjectType("Button") then
 			S:HandleCloseButton(child)
 			child:ClearAllPoints()
-			child:SetPoint("TOPRIGHT", _NPCScanButton, "TOPRIGHT", 4, 4)
+			child:Point("TOPRIGHT", _NPCScanButton, "TOPRIGHT", 4, 4)
 			child:SetScale(1)
 		end
 	end
@@ -47,8 +50,22 @@ local function LoadSkin()
 	S:HandleDropDownBox(_NPCScanConfigSoundDropdown)
 
 	for i = 1, 10 do
- 	   S:HandleTab(_G["_NPCScanSearchTab" .. i])
+		local tab = _G["_NPCScanSearchTab"..i]
+
+		S:HandleTab(tab)
+
+		for i = 1, tab:GetNumChildren() do
+			local child = select(i, tab:GetChildren())
+
+			if child and child:IsObjectType("CheckButton") then
+				S:HandleCheckBox(child)
+			end
+		end
 	end
+
+	S:HandleEditBox(_NPCScanSearchNpcIDEditBox)
+	S:HandleEditBox(_NPCScanSearchNpcWorldEditBox)
+	S:HandleEditBox(_NPCScanSearchNpcNameEditBox)
 end
 
 S:AddCallbackForAddon("_NPCScan", "_NPCScan", LoadSkin)
